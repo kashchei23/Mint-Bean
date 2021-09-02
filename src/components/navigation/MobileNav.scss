@@ -1,0 +1,76 @@
+@import './../../styles/_colors';
+@import './../../styles/_settings';
+@import '../../styles/_transitions';
+
+.mobile-menu {
+  @media (min-width: 600px) {
+    display: none;
+  }
+  position: fixed;
+  width: 100%;
+  height: auto;
+  background-color: $mint-white;
+  top: -250px;
+  left: 0;
+  margin: 0;
+  padding: 12px 0;
+  z-index: 5;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  transition: $easings-timing-steady;
+  li {
+    display: block;
+    list-style: none;
+    text-align: center;
+    transition: $easings-timing-fast;
+    a {
+      color: $mint-green;
+      font-size: 24px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: $easings-timing-fast;
+      padding: 12px 20px;
+      display: block;
+      width: 100%;
+    }
+  }
+  li:hover {
+    background-image: $mint-gradient-primary;
+    a {
+      color: $mint-white;
+    }
+  }
+  &-open {
+    top: 60px;
+  }
+}
+
+.menu-icon-button {
+  @media (min-width: 600px) {
+    display: none;
+  }
+  display: block;
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border: none;
+  color: $mint-white;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.menu-shadow {
+  position: fixed;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  top: 60px;
+  left: 0;
+  z-index: 4;
+  pointer-events: none;
+  transition: $easings-timing-steady;
+  &.fade-in {
+    background-color: $black-semi-transparent;
+    pointer-events: all;
+  }
+}

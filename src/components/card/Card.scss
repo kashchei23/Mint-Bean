@@ -1,0 +1,111 @@
+@import './../../styles/_colors';
+@import '../../styles/_transitions';
+@import '../../styles/_settings';
+@import '../../styles/_animations';
+
+.game-container {
+  height: 100vh;
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .board {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px 5px;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+//* Game card
+.mint-card {
+  background-color: transparent;
+  width: 119px;
+  height: 142px;
+  @media (min-width: 600px) {
+    width: 149px;
+    height: 182px;
+  }
+  border: none;
+  perspective: 1000px;
+  transition: $easings-timing-steady;
+  margin: 8px 0;
+  &-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+  }
+  &-flipped {
+    transform: rotateY(180deg);
+  }
+  &-front,
+  &-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-back {
+    transform: rotateY(180deg);
+    background-image: url('https://res.cloudinary.com/obkidz/image/upload/c_scale,w_500/v1630296509/Mint%20Match/snail_nm8q6y.png');
+  }
+}
+
+//* Next level button
+.next-level-button {
+  font-family: $globalFont;
+  background-image: $orange-gradient;
+  color: $mint-white;
+  padding: 12.5px;
+  margin: 40px auto;
+  display: block;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
+  transition: $easings-timing-steady;
+  transform: scale(1);
+  border: none;
+}
+
+//* Game card states
+
+.match {
+  animation: 1s ease 0.5s forwards scaleOut;
+  position: relative;
+  z-index: 1;
+}
+
+.no-match {
+  animation: 1s ease 0.5s both jiggle;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+//* Level message states
+.scale {
+  animation: 1s forwards scaleUp;
+}
+
+.level-clear {
+  text-align: center;
+  transform: scale(1);
+}

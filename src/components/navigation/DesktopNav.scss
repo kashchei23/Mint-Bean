@@ -1,0 +1,38 @@
+@import './../../styles/_colors';
+@import '../../styles/_transitions';
+
+.desktop-menu {
+  @media (max-width: 599px) {
+    display: none;
+  }
+  margin: 0;
+  li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px;
+    a {
+      text-decoration: none;
+      color: $mint-white;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+}
+
+#menu-cta {
+  background-image: $orange-gradient;
+  color: $mint-white;
+
+  padding: 2px 16px;
+  margin: 40px auto;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 3px;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.5);
+  transition: $easings-timing-steady;
+  &:hover {
+    transform: scale(1.04);
+  }
+}
