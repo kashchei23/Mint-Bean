@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Skills from '../skills/Skills';
 
 import './Landing.scss';
-// import '../styles/_settings.scss';
 
 const Landing = () => (
 	<>
@@ -52,6 +52,15 @@ const Landing = () => (
 					Click to play!
 				</Link>
 			</main>
+			<div className='award'>
+				<h1>Recipient of a 2021 Mintbean Star Award</h1>
+				<img
+					src='https://res.cloudinary.com/obkidz/image/upload/v1637171549/Mint%20Match/Large_GIF_400x400_yuhe8p.gif'
+					alt='MintBean awards'
+					className='award-img'
+				/>
+			</div>
+			<Skills />
 			<section className='landing-developer-section' id='developer'>
 				<h1>Developer</h1>
 				<div className='developer-img-container'>
@@ -65,9 +74,9 @@ const Landing = () => (
 				<p>
 					Daniel Brown A Front End UI/UX Developer with an eye for design. In
 					addition to React, Javascript, and SCSS, I use tools such as Adobe
-					Illustrator, XD, After Effects and others to add extra nuance to
-					designs. Always curious, always learning, and always searching for
-					ways to solve problems.
+					Illustrator, XD, After Effects and others to bring designs to life.
+					Always curious, always learning, and always searching for ways to
+					solve problems.
 				</p>
 				<a
 					className='styled-link'
@@ -85,7 +94,13 @@ const Landing = () => (
 					className='footer-logo'
 				/>
 			</Link>
-			<p>Created using React, JS, SCSS, Adobe XD and Adobe Illustrator.</p>
+			<Link
+				className='styled-link footer-cta'
+				to='/mint-match-game'
+				key='/mint-match'
+			>
+				Play it now!
+			</Link>
 			<div className='footer-social-links'>
 				<a
 					className='social-icons'

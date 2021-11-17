@@ -1,0 +1,31 @@
+@use '../../styles/_breakpoints' as breakpoints;
+
+.skillset-container {
+	text-align: center;
+	margin: 200px auto;
+}
+
+.skillset {
+	padding: 0;
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	max-width: 100%;
+	margin: auto;
+	&--card {
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 100px;
+		height: auto;
+		padding: 15px 5px;
+		border-radius: 10px;
+		margin: 8px;
+	}
+	&--icon {
+		width: 70px;
+		display: block;
+		margin: 0 auto 12px;
+	}
+}
