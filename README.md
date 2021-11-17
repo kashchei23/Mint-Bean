@@ -6,7 +6,7 @@ https://mint-match.web.app/
 
 Authored by: Daniel Brown
 
-Portfolio: https://portfolio-52086.web.app/
+Portfolio: https://daniel-brown-portfolio.web.app
 
 <br />
 
@@ -32,6 +32,7 @@ The mint match cards are custom made using Adobe Illustrator.
 ## Development:
 
 Created using:
+
 - React
 - Vanilla JS
 - SCSS

@@ -63,8 +63,8 @@ const Landing = () => (
 				</div>
 				<h2>Daniel Brown </h2>
 				<p>
-					A Front End UI/UX Developer with an eye for design. In addition to
-					React, JS, and SCSS, I&apos;m competent with tools such as Adobe
+					Daniel Brown A Front End UI/UX Developer with an eye for design. In
+					addition to React, Javascript, and SCSS, I use tools such as Adobe
 					Illustrator, XD, After Effects and others to add extra nuance to
 					designs. Always curious, always learning, and always searching for
 					ways to solve problems.
@@ -89,19 +89,25 @@ const Landing = () => (
 			<div className='footer-social-links'>
 				<a
 					className='social-icons'
+					target='_blank'
+					rel='noreferrer'
 					href='https://github.com/kashchei23/mint-match'
 				>
 					<i className='fab fa-github fa-3x' />
 				</a>
 				<a
 					className='social-icons'
+					target='_blank'
+					rel='noreferrer'
 					href='https://www.linkedin.com/in/danielrbrown/'
 				>
 					<i className='fab fa-linkedin fa-3x' />
 				</a>
 				<a
 					className='social-icons'
-					href='https://portfolio-52086.firebaseapp.com/'
+					target='_blank'
+					rel='noreferrer'
+					href='https://daniel-brown-portfolio.web.app'
 				>
 					<i className='fas fa-briefcase fa-3x' />
 				</a>
